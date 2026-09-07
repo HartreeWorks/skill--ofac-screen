@@ -10,8 +10,6 @@ Check people or organisations against OFAC sanctions lists from your agent, with
 
 ![Screening output for Vladimir Putin showing a potential match for human review, matching identifiers, list dates and saved evidence.](./assets/vladimir-putin-screening.jpg)
 
-Example output from 7 September 2026.
-
 ## Requirements
 
 - An agent that can load skills, create local files and run Python commands.
