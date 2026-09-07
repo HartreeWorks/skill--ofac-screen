@@ -17,3 +17,5 @@ config.json
 .vscode/
 node_modules/
 .venv/
+!assets/
+!assets/vladimir-putin-screening.jpg
