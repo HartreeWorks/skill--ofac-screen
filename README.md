@@ -5,17 +5,12 @@ Check people or organisations against OFAC sanctions lists from your agent, with
 ## Example
 
 ```text
-Use ofac-screen to look up the fictional organisation
-"Zzxqv Prototype Fixture 7f3e9a" and save the screening report.
+/ofac-screen Vladimir Putin
 ```
 
-In a live API check on 7 September 2026, this fictional control returned:
+![Screening output for Vladimir Putin showing a potential match for human review, matching identifiers, list dates and saved evidence.](./assets/vladimir-putin-screening.jpg)
 
-| Name supplied | Result | Matches |
-| --- | --- | --- |
-| Zzxqv Prototype Fixture 7f3e9a | No potential matches returned | 0 |
-
-Scope: OFAC SDN and consolidated non-SDN lists. Minimum similarity score: 95. Results can change as the lists change.
+Example output from 7 September 2026. Results can change as the lists change; similarity scores are not probabilities of identity.
 
 The skill saves the submitted identifiers and settings, vendor response, summary and Markdown report. Potential matches are presented for human review; failed or incomplete requests remain unresolved.
 
@@ -41,12 +36,10 @@ Restart your agent session if the new skill does not appear.
 Ask your agent:
 
 ```text
-Use ofac-screen to check the fictional organisation
-"Zzxqv Prototype Fixture 7f3e9a". Use my configured API key,
-show the screening result, and link to the saved report.
+/ofac-screen Vladimir Putin
 ```
 
-For a real lookup, replace the fictional name with the payee's legal name. Add their date of birth or other known identifiers when helpful. The skill supports name-only searches and asks when supplied details are ambiguous.
+For your own lookup, replace Vladimir Putin with the payee's legal name. Add their date of birth or other known identifiers when helpful. The skill supports name-only searches and asks when supplied details are ambiguous.
 
 Expect one of three outcomes: **no potential matches returned**, **potential matches—review needed**, or **screening failed**. Reports are saved under `~/.local/share/ofac-screen/runs` by default; the output directory is configurable.
 
